@@ -5,7 +5,8 @@ import persistence.EmployeeRepository;
 
 public class JobsController {
 
-	private EmployeeRepository repository;
+	private EmployeeRepository repository = new EmployeeRepository();
+	
 	
 	public JobsController(){
 		
@@ -14,6 +15,7 @@ public class JobsController {
 	public void createBossEmployee(String name, String address, String phone, double salaryPerMonth) throws Exception{		
 		Employee boss = new Employee(name, address, phone,  salaryPerMonth, PaymentFactory.createPaymentRateBoss());
 		repository.addMember(boss);
+		repository.addEmployee(boss);
 	}
 	
 	public void createEmployee(String name, String address, String phone, double salaryPerMonth) throws Exception{		
@@ -32,11 +34,10 @@ public class JobsController {
 	
 	}
 
+	
+	
 	public String getAllEmployees() {
-		
-		
-		
-		return null;
+//		return "Employee: " + "Name: " + name + ", Address: " + address + ", Phone: " + phone + "]";
 	}
 
 	public void createVolunteer(String string, String string2, String string3) {
