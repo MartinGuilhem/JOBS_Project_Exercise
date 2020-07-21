@@ -15,6 +15,13 @@ public class Employee extends AbsStaffMember {
 		this.paymentRate=paymentRate;
 	}
 
+	public String getName() {
+		return name;
+	}
+	
+	public void setNewSalary() {
+		
+	}
 	
 	public String toStringEmployee() {
 	return "EMPLOYEE: [NAME: " + name + ", ADDRESS: " + address + ", PHONE: " + phone + 

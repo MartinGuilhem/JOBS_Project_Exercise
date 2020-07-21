@@ -42,7 +42,17 @@ public class JobsController {
 
 
 	public void payAllEmployeers() {
-		// TODO Auto-generated method stub
+		List<Employee> employeesList = new ArrayList<>();
+		employeesList=repository.getAllEmployees();
+				
+		for(int i=0; i<employeesList.size(); i++)
+		{
+			if(employeesList.get(i).getName().contains(Boss)) {
+				employeesList.get(i).
+			}
+			
+//			System.out.println(employeesList.get(i).toStringEmployee());
+		}	
 	
 	}
 

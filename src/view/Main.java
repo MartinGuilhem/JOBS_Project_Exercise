@@ -17,7 +17,7 @@ public class Main {
 		controller.createManagerEmployee("Pedro Employee Manager", "Dirección molona 2", "665226666", 80.0);
 		
 		
-//		controller.payAllEmployeers();
+		controller.payAllEmployeers();
 		
 //		String allEmployees=controller.getAllEmployees();		
 		
