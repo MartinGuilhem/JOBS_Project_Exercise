@@ -1,6 +1,11 @@
 package application;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import domain.AbsStaffMember;
 import domain.Employee;
+import domain.Volunteer;
 import persistence.EmployeeRepository;
 
 public class JobsController {
@@ -19,13 +24,20 @@ public class JobsController {
 	}
 	
 	public void createEmployee(String name, String address, String phone, double salaryPerMonth) throws Exception{		
-		Employee boss = new Employee(name, address, phone,  salaryPerMonth, PaymentFactory.createPaymentRateEmployee());
-		repository.addMember(boss);
+		Employee employee = new Employee(name, address, phone,  salaryPerMonth, PaymentFactory.createPaymentRateEmployee());
+		repository.addMember(employee);
+		repository.addEmployee(employee);
 	}
 
 	public void createManagerEmployee(String name, String address, String phone, double salaryPerMonth) throws Exception{
-		// TODO Auto-generated method stub
-		
+		Employee manager = new Employee(name, address, phone,  salaryPerMonth, PaymentFactory.createPaymentRateBoss());
+		repository.addMember(manager);
+		repository.addEmployee(manager);
+	}
+	
+	public void createVolunteer(String name, String address, String phone, String description) throws Exception{
+		Volunteer volunteer = new Volunteer(name, address, phone, description);
+		repository.addMember(volunteer);
 	}
 
 
@@ -36,15 +48,25 @@ public class JobsController {
 
 	
 	
-	public String getAllEmployees() {
-//		return "Employee: " + "Name: " + name + ", Address: " + address + ", Phone: " + phone + "]";
+	public void getAllEmployees() {
+		List<Employee> employeesList = new ArrayList<>();
+		employeesList=repository.getAllEmployees();
+				
+		for(int i=0; i<employeesList.size(); i++)
+		{
+			System.out.println(employeesList.get(i).toStringEmployee());
+		}	
 	}
 
-	public void createVolunteer(String string, String string2, String string3) {
-		// TODO Auto-generated method stub
-		
+	
+	public void getAllMembers() {
+		List<AbsStaffMember> membersList = new ArrayList<>();
+		membersList=repository.getAllMembers();
+			
+		for(int i=0; i<membersList.size(); i++)
+		{
+			System.out.println(membersList.get(i).toStringMember());
+		}	
 	}
-	
-	
 	
 }
