@@ -15,18 +15,17 @@ public class EmployeeRepository {
 	
 	}
 	
-	
+//	## GETTERS & SETTERS of MEMBERS and EMPLOYEES ## 
 	public List<AbsStaffMember> getAllMembers(){
 		return new ArrayList<>(members);
 	}
-		
+	
 	public void addMember(AbsStaffMember member) throws Exception{
 		if(member==null) throw new Exception();
 		members.add(member);
 	}
 	
-	
-	 
+		 
 	public List<Employee> getAllEmployees(){
 		return new ArrayList<>(employees);
 	}
