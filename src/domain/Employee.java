@@ -4,6 +4,7 @@ public class Employee extends AbsStaffMember {
 
 	protected double salaryPerMonth;
 	protected IPaymentRate paymentRate;	
+	
 
 	public Employee(String name, String address, String phone, double salaryPerMonth,IPaymentRate paymentRate) throws Exception {
 		super(name, address, phone);		
@@ -14,6 +15,13 @@ public class Employee extends AbsStaffMember {
 		this.paymentRate=paymentRate;
 	}
 
+	
+	public String toStringEmployee() {
+	return "EMPLOYEE: [NAME: " + name + ", ADDRESS: " + address + ", PHONE: " + phone + 
+			", SALARY: " + salaryPerMonth + "]";
+	}
+
+	
 	
 	@Override
 	public void pay() {
