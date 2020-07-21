@@ -24,10 +24,11 @@ public abstract class AbsStaffMember {
 		id = COUNTER_MEMBERS;
 		COUNTER_MEMBERS++;
 	}
+	
+	public String toStringMember() {
+		return "MEMBER: [Name: " + name + ", Address: " + address + ", Phone: " + phone + "]";
+		}
 
-//	public String toString() {
-//		return "Member [Name: " + name + ", Address: " + address + ", Phone: " + phone + "]";
-//	}
-//	
+
 	public abstract void pay();
 }
