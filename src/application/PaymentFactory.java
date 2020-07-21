@@ -4,6 +4,20 @@ import domain.IPaymentRate;
 
 public class PaymentFactory {
 
+//	10%+ -> Manager 
+//	50%+ -> Boss
+//	15%- -> Employee
+//	0%   -> Volunteer
+
+	
+	public static IPaymentRate createPaymentRateManager(){
+		return new IPaymentRate() {	
+			@Override
+			public double pay(double salaryPerMonth) {
+				return salaryPerMonth*1.1;
+			}
+		};
+	}
 	
 	public static IPaymentRate createPaymentRateBoss(){
 		return new IPaymentRate() {	
@@ -18,7 +32,7 @@ public class PaymentFactory {
 		return new IPaymentRate() {
 			@Override
 			public double pay(double salaryPerMonth) {
-				return 0;//todo 
+				return salaryPerMonth*1.15;//todo 
 			}
 		};
 	}
