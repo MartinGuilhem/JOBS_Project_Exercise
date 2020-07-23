@@ -25,7 +25,7 @@ public class Employee extends AbsStaffMember {
 	
 	public String toStringEmployee() {
 	return "EMPLOYEE: [NAME: " + name + ", ADDRESS: " + address + ", PHONE: " + phone + 
-			", SALARY: " + salaryPerMonth + "]";
+			", SALARY: " + getTotalPaid() + "]";
 	}
 
 	

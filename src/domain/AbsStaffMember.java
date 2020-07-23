@@ -25,6 +25,16 @@ public abstract class AbsStaffMember {
 		COUNTER_MEMBERS++;
 	}
 	
+	
+	public double getTotalPaid() {
+		return totalPaid;
+	}
+
+	public void setTotalPaid(double totalPaid) {
+		this.totalPaid = totalPaid;
+	}
+	
+	
 	public String toStringMember() {
 		return "MEMBER: [Name: " + name + ", Address: " + address + ", Phone: " + phone + "]";
 		}

@@ -32,7 +32,7 @@ public class PaymentFactory {
 		return new IPaymentRate() {
 			@Override
 			public double pay(double salaryPerMonth) {
-				return salaryPerMonth*1.15;//todo 
+				return salaryPerMonth*0.85;
 			}
 		};
 	}
