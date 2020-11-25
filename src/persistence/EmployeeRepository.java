@@ -8,14 +8,15 @@ import domain.Employee;
 
 public class EmployeeRepository {
 
+	//ATRIBUTES
 	private static List<AbsStaffMember> members = new ArrayList<>();
 	private static List<Employee> employees = new ArrayList<>();
 	
+	//CONSTRUCTOR
 	public EmployeeRepository(){
-	
 	}
 	
-//	## GETTERS & SETTERS of MEMBERS and EMPLOYEES ## 
+	//GETTERS & SETTERS of MEMBERS and EMPLOYEES
 	public List<AbsStaffMember> getAllMembers(){
 		return new ArrayList<>(members);
 	}
@@ -24,7 +25,6 @@ public class EmployeeRepository {
 		if(member==null) throw new Exception();
 		members.add(member);
 	}
-	
 		 
 	public List<Employee> getAllEmployees(){
 		return new ArrayList<>(employees);
@@ -34,7 +34,5 @@ public class EmployeeRepository {
 		if(employee==null) throw new Exception();
 		employees.add(employee);
 	}
-	
-	
 	
 }

@@ -2,6 +2,7 @@ package domain;
 
 public abstract class AbsStaffMember {
 
+	//ATRIBUTES
 	protected int id;
 	protected String name;
 	protected String address;
@@ -10,6 +11,8 @@ public abstract class AbsStaffMember {
 
 	private static int COUNTER_MEMBERS = 1;
 
+	
+	//CONSTRUCTOR
 	public AbsStaffMember(String name, String address, String phone) throws Exception {
 		if (name.equals(""))
 			throw new Exception();

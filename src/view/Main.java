@@ -3,8 +3,6 @@ package view;
 import application.JobsController;
 
 public class Main {
-
-	
 	
 	private static JobsController controller=new JobsController();
 	
@@ -17,10 +15,12 @@ public class Main {
 		controller.createManagerEmployee("Pedro Employee Manager", "Dirección molona 2", "665226666", 80.0);
 		
 		
-		controller.payAllEmployeers();
+		controller.payAllEmployers();
 		
-		controller.getAllEmployees();
+		controller.getAllEmployers();
+		
 		System.out.println("\n");
+		
 		controller.getAllMembers();
 	}
 

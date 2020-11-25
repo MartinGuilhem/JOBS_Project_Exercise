@@ -3,8 +3,6 @@ package application;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.jobs.application.PaymentFactory;
-
 import domain.AbsStaffMember;
 import domain.Employee;
 import domain.Volunteer;
@@ -16,7 +14,6 @@ public class JobsController {
 	
 	
 	public JobsController(){
-		
 	}
 	
 	public void createBossEmployee(String name, String address, String phone, double salaryPerMonth) throws Exception{		
@@ -46,27 +43,14 @@ public class JobsController {
 	}
 
 
-	public void payAllEmployeers() {
-//		List<Employee> employeesList = new ArrayList<>();
-//		employeesList=repository.getAllEmployees();
-//				
-//		for(int i=0; i<employeesList.size(); i++)
-//		{
-//			if(employeesList.get(i).getName().contains(Boss)) {
-//				employeesList.get(i).
-//			}
-//			
-////			System.out.println(employeesList.get(i).toStringEmployee());
-//		}
+	public void payAllEmployers() {
 		for(AbsStaffMember e: repository.getAllMembers()) {
 			 e.getTotalPaid();
 			}
-	
 	}
 
 	
-	
-	public void getAllEmployees() {
+	public void getAllEmployers() {
 		List<Employee> employeesList = new ArrayList<>();
 		employeesList=repository.getAllEmployees();
 				
